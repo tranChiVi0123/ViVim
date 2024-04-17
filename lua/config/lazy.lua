@@ -58,8 +58,24 @@ require("gitsigns").setup({
   },
 })
 
-vim.o.foldcolumn = '1' -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+require("neo-tree").setup({
+  filesystem = {
+    filtered_items = {
+      visible = true,
+      show_hidden_count = true,
+      hide_dotfiles = false,
+      hide_gitignored = true,
+      hide_by_name = {
+        "node_modules",
+      },
+      always_show = {
+        '.gitignore',
+      },
+      never_show = {
+        '.git',
+        '.DS_Store',
+      },
+    }
+  }
+})
 vim.cmd.colorscheme "tokyonight-night"
