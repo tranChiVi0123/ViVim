@@ -58,24 +58,23 @@ require("gitsigns").setup({
   },
 })
 
-require("neo-tree").setup({
-  filesystem = {
-    filtered_items = {
-      visible = true,
-      show_hidden_count = true,
-      hide_dotfiles = false,
-      hide_gitignored = true,
-      hide_by_name = {
-        "node_modules",
-      },
-      always_show = {
-        '.gitignore',
-      },
-      never_show = {
-        '.git',
-        '.DS_Store',
-      },
-    }
-  }
-})
-vim.cmd.colorscheme "tokyonight-night"
+-- require("neo-tree").setup({
+--   filesystem = {
+--     filtered_items = {
+--       show_hidden_count = true,
+--       hide_dotfiles = false,
+--       hide_gitignored = true,
+--       hide_by_name = {
+--         "node_modules",
+--       },
+--       always_show = {
+--         ".gitignore",
+--       },
+--       never_show = {
+--         ".git",
+--         ".DS_Store",
+--       },
+--     },
+--   },
+-- })
+vim.cmd.colorscheme("tokyonight-night")
